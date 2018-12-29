@@ -1,17 +1,12 @@
 package com.crypt.CryptX.Encryptions.ReverseText;
 
-import com.crypt.CryptX.DTO.EncryptTextBaseDTO;
-import com.crypt.CryptX.Encryptions.EncryptionInterface;
+import com.crypt.CryptX.DTO.EncryptDTO.EncryptReverseTextDTO;
 
-public class ReverseText implements EncryptionInterface {
-    @Override
-    public String Encrypt(EncryptTextBaseDTO encryptTextBaseDTO) {
-        return Reverse(encryptTextBaseDTO.getEncodetext());
-    }
+public class ReverseText{
 
-    @Override
-    public String Decrypt(EncryptTextBaseDTO encryptTextBaseDTO) {
-        return Reverse(encryptTextBaseDTO.getDecodeText());
+    public EncryptReverseTextDTO EncryptText(EncryptReverseTextDTO encryptReverseTextDTO) {
+        encryptReverseTextDTO.setTextEncoded(Reverse(encryptReverseTextDTO.getTextToEncode()));
+        return encryptReverseTextDTO;
     }
 
     private String Reverse(String text){

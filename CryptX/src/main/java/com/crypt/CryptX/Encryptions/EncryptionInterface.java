@@ -1,9 +1,15 @@
 package com.crypt.CryptX.Encryptions;
 
-import com.crypt.CryptX.DTO.EncryptTextBaseDTO;
+import com.crypt.CryptX.DTO.DecryptDTO.DecryptTextBaseDTO;
+import com.crypt.CryptX.DTO.EncryptDTO.EncryptTextBaseDTO;
 
-public interface EncryptionInterface {
-    String Encrypt(EncryptTextBaseDTO encryptTextBaseDTO);
-    String Decrypt(EncryptTextBaseDTO encryptTextBaseDTO);
-    //String ForceDecrypt();
+import java.util.List;
+
+public interface EncryptionInterface<EncryptTextDTO extends EncryptTextBaseDTO,DecryptTextDTO extends DecryptTextBaseDTO> {
+     EncryptTextDTO EncryptText(EncryptTextDTO encryptTextDTO);
+
+     DecryptTextDTO DecryptText(DecryptTextDTO decryptTextDTO);
+
+     List<DecryptTextDTO> ForceDecryptText(DecryptTextDTO decryptTextDTO);
+
 }

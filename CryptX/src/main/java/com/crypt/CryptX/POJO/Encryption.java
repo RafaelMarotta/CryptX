@@ -8,7 +8,7 @@ import javax.persistence.*;
 
 @Entity
 @Data
-@Table(name = "t_contato")
+@Table(name = "t_encryption")
 @EqualsAndHashCode(of = "id")
 public class Encryption {
     @Id
