@@ -1,6 +1,7 @@
 package com.crypt.CryptX.Controller;
 
 import com.crypt.CryptX.POJO.Encryption;
+import com.crypt.CryptX.POJO.Enums.KeyEnum;
 import com.crypt.CryptX.Service.EncryptionFacade;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
